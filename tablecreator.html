@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table Creator</title>
+	<style type="text/css">
+		#rows{
+
+		}
+		#cols{
+
+		}
+		#tableid{
+			border:2px black;
+
+		}
+		table, tr, td {
+   		 border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+	
+	<h2><center>Table Creator</center></h2>
+	No. of rows:<input id="rows" type="text" name="rows"><br>
+	No. of columns:<input id="cols" type="text" name="cols">
+
+	<button onclick="create()">Create</button>
+	<br>
+	<br>
+	<div id="tableid">
+	</div>
+	<script type="text/javascript">
+			
+		function create(){
+			var r=document.getElementById('rows').value;
+			var c=document.getElementById('cols').value;
+			console.log(r,c);
+			let table = document.createElement('table');
+			table.style.border = "1px solid #000";
+			for(i=0;i<r;i++){
+				var row = table.insertRow(i);
+					for(j=0;j<c;j++){
+						var cell=row.insertCell(j);
+						cell.innerHTML="Hi"+i+j;
+					}
+			}
+			document.getElementById('tableid').appendChild(table);
+		}
+	</script>
+</body>
+</html>
