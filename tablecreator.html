@@ -14,7 +14,8 @@
 
 		}
 		table, tr, td {
-   		 border: 1px solid black;
+   		 border: 2px solid black;
+   		 padding: 3px;
 		}
 	</style>
 </head>
@@ -36,7 +37,7 @@
 			var c=document.getElementById('cols').value;
 			console.log(r,c);
 			let table = document.createElement('table');
-			table.style.border = "1px solid #000";
+			table.style.border = "3px solid #000";
 			for(i=0;i<r;i++){
 				var row = table.insertRow(i);
 					for(j=0;j<c;j++){
